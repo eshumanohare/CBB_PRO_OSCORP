@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: rgb(87, 189, 130);
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+.field-name1,
+.field-name2,
+.field-name3,
+.field-name4,
+.field-name5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.field-name1 i,
+.field-name2 i,
+.field-name3 i,
+.field-name4 i,
+.field-name5 i {
+  padding: 10px;
+}
+
+.field-name1 .next,
+.field-name2 .next,
+.field-name3 .next,
+.field-name4 .next,
+.field-name5 .next {
+  cursor: pointer;
+}
+
+.field-name1 input,
+.field-name2 input,
+.field-name3 input,
+.field-name4 input,
+.field-name5 input {
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+}
+
+div.innactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+}
+
+div.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
