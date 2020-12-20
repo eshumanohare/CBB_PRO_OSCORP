@@ -8,11 +8,13 @@
       src="https://kit.fontawesome.com/61da0dae45.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./styles.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/static/styles.css" />
     <title>Cancer Detection App</title>
   </head>
   <body>
-    <form action="submit">
+    <form method="post">
       <div class="field-name1">
         <h3 class="label-text">
           Mean Radius
@@ -23,7 +25,12 @@
           </span>
         </h3>
         <i class="fas fa-disease fa-4x"></i>
-        <input type="number" class="field-one" placeholder="Mean Radius" required />
+        <input
+          type="number"
+          class="field-one"
+          placeholder="Mean Radius"
+          required
+        />
         <i class="fas fa-arrow-right fa-3x next"></i>
       </div>
 
@@ -36,7 +43,12 @@
           </span>
         </h3>
         <i class="fas fa-star-of-life fa-3x"></i>
-        <input type="number" class="field-two" placeholder="Mean Texture" required />
+        <input
+          type="number"
+          class="field-two"
+          placeholder="Mean Texture"
+          required
+        />
         <i class="fas fa-arrow-right fa-3x next"></i>
       </div>
 
@@ -49,7 +61,12 @@
           </span>
         </h3>
         <i class="fas fa-stethoscope fa-3x"></i>
-        <input type="number" class="field-three" placeholder="Mean Perimeter" required />
+        <input
+          type="number"
+          class="field-three"
+          placeholder="Mean Perimeter"
+          required
+        />
         <i class="fas fa-arrow-right fa-3x next"></i>
       </div>
 
@@ -62,7 +79,12 @@
           </span>
         </h3>
         <i class="fas fa-bacteria fa-3x"></i>
-        <input type="number" class="field-four" placeholder="Mean Area" required />
+        <input
+          type="number"
+          class="field-four"
+          placeholder="Mean Area"
+          required
+        />
         <i class="fas fa-arrow-right fa-3x next"></i>
       </div>
 
@@ -75,10 +97,32 @@
           </span>
         </h3>
         <i class="fas fa-bacterium fa-3x"></i>
-        <input type="number" class="field-five" placeholder="Mean Concave Points" required />
+        <input
+          type="number"
+          class="field-five"
+          placeholder="Mean Concave Points"
+          required
+        />
         <i class="fas fa-arrow-right fa-3x next"></i>
       </div>
+      <!-- Print either benign or malignant -->
+      <div class="field-name6 innactive">
+        <h3 class="label-text result" style="left: 15%;" >
+          <span class="tooltip" style="top: -120px" ;></span>
+        </h3>
+      </div>
+      <div class="animation">
+    <ul class="box">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    
+  </div>
     </form>
-    <script src="./js/app.js"></script>
+    <script src="../static/app.js"></script>
   </body>
 </html>
